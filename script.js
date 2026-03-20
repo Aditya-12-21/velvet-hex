@@ -1,62 +1,75 @@
-function scrollToCollection(){
+document.addEventListener("DOMContentLoaded", function(){
+
+// SCROLL
+window.scrollToCollection = function(){
 document.getElementById("collection").scrollIntoView({
 behavior:"smooth"
 });
-}
-window.addEventListener("scroll", function(){
+};
 
-let navbar = document.querySelector(".navbar");
+// MENU
+window.toggleMenu = function(){
+let menu = document.getElementById("menu");
+menu.classList.toggle("active");
+};
 
-if(window.scrollY > 50){
-navbar.style.background = "#000";
-}
+// HERO SLIDER
+let images = ["preview one.jpeg","preview two.jpeg","preview three.jpeg"];
+let i = 0;
 
-else{
-navbar.style.background = "transparent";
-}
+setInterval(()=>{
+i = (i + 1) % images.length;
+document.querySelector(".hero").style.background =
+`url(${images[i]}) center/cover no-repeat`;
+},3000);
 
-});
-let images = document.querySelectorAll(".card img");
+// IMAGE POPUP
+let imgs = document.querySelectorAll(".card img");
 
-images.forEach(img => {
-
-img.addEventListener("click", function(){
-
-this.classList.toggle("zoom");
-
-});
-
-});
-let images = document.querySelectorAll(".card img");
-
-images.forEach(img => {
-
+imgs.forEach(img=>{
 img.addEventListener("click", function(){
 
 let popup = document.createElement("div");
-popup.style.position = "fixed";
-popup.style.top = "0";
-popup.style.left = "0";
-popup.style.width = "100%";
-popup.style.height = "100%";
-popup.style.background = "rgba(0,0,0,0.9)";
-popup.style.display = "flex";
-popup.style.justifyContent = "center";
-popup.style.alignItems = "center";
+
+popup.style.position="fixed";
+popup.style.top="0";
+popup.style.left="0";
+popup.style.width="100%";
+popup.style.height="100%";
+popup.style.background="rgba(0,0,0,0.9)";
+popup.style.display="flex";
+popup.style.justifyContent="center";
+popup.style.alignItems="center";
 
 let image = document.createElement("img");
-image.src = this.src;
-image.style.width = "400px";
-image.style.borderRadius = "10px";
+image.src=this.src;
+image.style.maxWidth="90%";
+image.style.maxHeight="80%";
 
 popup.appendChild(image);
 
-popup.onclick = function(){
-popup.remove();
-};
+popup.onclick=()=>popup.remove();
 
 document.body.appendChild(popup);
 
+});
+});
+
+// WHATSAPP ORDER
+window.orderNow = function(product){
+let msg = `Hi, I want to order: ${product} from VELVET HEX`;
+window.open(`https://wa.me/918847325312?text=${encodeURIComponent(msg)}`,"_blank");
+};
+
+// SCROLL ANIMATION
+let elements = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", ()=>{
+elements.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add("show");
+}
+});
 });
 
 });

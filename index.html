@@ -1,86 +1,108 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>VELVET HEX</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
 <header class="navbar">
 
-<h1 class="logo">VELVET HEX</h1>
+<div class="logo-container">
+<img src="LOGO.jpeg" class="logo-img">
+<span class="logo-text">VELVET HEX</span>
+</div>
 
-<nav>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="menu">
 <a href="#">Home</a>
 <a href="#collection">Collection</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<a href="#contact">Contact</a>
 </nav>
 
 </header>
 
-<!-- HERO SECTION -->
-
+<!-- HERO -->
 <section class="hero">
-
-<h2>Luxury Handmade Jewellery</h2>
-<p>Crafted with elegance and creativity.</p>
-
+<div class="hero-overlay">
+<h2>VELVET HEX</h2>
+<p>Luxury Handmade Jewellery</p>
 <button onclick="scrollToCollection()">Explore Collection</button>
-
+</div>
 </section>
 
-<!-- COLLECTION SECTION -->
-
-<section class="collection" id="collection">
+<!-- COLLECTION -->
+<section id="collection" class="collection fade-in">
 
 <h2>Our Collection</h2>
 
 <div class="products">
 
-<div class="card">
-<img src="pic1.jpg" alt="Jewellery Item 1">
-<p>Earrings</p>
+<div class="card fade-in">
+<img src="Draven.jpg">
+<p>Draven</p>
+<button onclick="orderNow('Draven')">Order</button>
 </div>
 
-<div class="card">
-<img src="pic2.jpg" alt="Jewellery Item 2">
-<p>Necklace</p>
+<div class="card fade-in">
+<img src="Elaris.jpg">
+<p>Elaris</p>
+<button onclick="orderNow('Elaris')">Order</button>
 </div>
 
-<div class="card">
-<img src="pic3.jpg" alt="Jewellery Item 3">
-<p>Bracelet</p>
+<div class="card fade-in">
+<img src="Helios.jpg">
+<p>Helios</p>
+<button onclick="orderNow('Helios')">Order</button>
 </div>
 
-<div class="card">
-<img src="pic4.jpg" alt="Jewellery Item 4">
-<p>Ring</p>
+<div class="card fade-in">
+<img src="Umbra.jpg">
+<p>Umbra</p>
+<button onclick="orderNow('Umbra')">Order</button>
 </div>
 
-<div class="card">
-<img src="pic5.jpg" alt="Jewellery Item 5">
-<p>Pendant</p>
+<div class="card fade-in">
+<img src="Zeus.jpg">
+<p>Zeus</p>
+<button onclick="orderNow('Zeus')">Order</button>
 </div>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
+<!-- CONTACT -->
+<section id="contact" class="contact fade-in">
+
+<h2>Connect With Us</h2>
+
+<a href="https://wa.me/918847325312" target="_blank">
+<button class="whatsapp">WhatsApp</button>
+</a>
+
+<a href="https://instagram.com/velvethex.jewelry" target="_blank">
+<button class="instagram">Instagram</button>
+</a>
+
+</section>
 
 <footer>
-
-<p>© 2026 VELVET HEX | Handmade Jewellery</p>
-
+<p>© 2026 VELVET HEX</p>
 </footer>
+
+<!-- FLOATING BUTTON -->
+<a href="https://wa.me/918847325312" class="floating-whatsapp" target="_blank">💬</a>
+
 <script src="script.js"></script>
+
 </body>
 </html>
