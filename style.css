@@ -1,8 +1,9 @@
 body{
 margin:0;
-font-family:'Poppins', sans-serif;
+font-family:'Montserrat', sans-serif;
 background:#0B0B0B;
 color:white;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -15,7 +16,7 @@ position:fixed;
 width:100%;
 top:0;
 z-index:1000;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.4);
 backdrop-filter:blur(15px);
 }
 
@@ -26,21 +27,25 @@ gap:10px;
 }
 
 .logo-img{
-width:45px;
-height:45px;
+width:60px;
+height:60px;
 border-radius:50%;
 }
 
 .logo-text{
 font-family:'Playfair Display', serif;
+font-size:28px;
 color:#D4AF37;
-letter-spacing:3px;
+letter-spacing:4px;
 }
 
+/* NAV */
 nav a{
 margin-left:20px;
 text-decoration:none;
 color:#C0C0C0;
+font-size:14px;
+letter-spacing:1px;
 }
 
 nav a:hover{
@@ -54,26 +59,45 @@ color:#D4AF37;
 cursor:pointer;
 }
 
-/* HERO */
+/* HERO - CINEMATIC */
 .hero{
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 background:url("preview one.jpeg") center/cover no-repeat;
+position:relative;
+animation:zoom 8s infinite alternate;
+}
+
+@keyframes zoom{
+0%{background-size:100%;}
+100%{background-size:110%;}
 }
 
 .hero-overlay{
-background:rgba(0,0,0,0.6);
-padding:40px;
-border-radius:10px;
+background:rgba(0,0,0,0.55);
+padding:60px 40px;
 text-align:center;
+border-radius:10px;
+backdrop-filter:blur(5px);
 }
 
-.hero h2{
-font-size:50px;
-color:#D4AF37;
+/* TITLE */
+.brand-title{
 font-family:'Playfair Display', serif;
+font-size:60px;
+letter-spacing:8px;
+background:linear-gradient(90deg,#D4AF37,#fff,#D4AF37);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* TAGLINE */
+.tagline{
+font-style:italic;
+color:#C0C0C0;
+margin-top:10px;
 }
 
 /* BUTTON */
@@ -83,8 +107,10 @@ color:black;
 border:none;
 padding:12px 25px;
 cursor:pointer;
-margin-top:10px;
+margin-top:15px;
 font-weight:bold;
+border-radius:30px;
+transition:0.3s;
 }
 
 button:hover{
@@ -95,59 +121,82 @@ background:#C0C0C0;
 .collection{
 background:white;
 color:black;
-padding:60px;
+padding:80px 20px;
 text-align:center;
 }
 
+.section-title{
+font-family:'Playfair Display', serif;
+font-size:32px;
+margin-bottom:30px;
+letter-spacing:2px;
+}
+
+/* PRODUCTS */
 .products{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:30px;
 }
 
 .card{
 background:#f8f8f8;
 padding:15px;
-border-radius:10px;
+border-radius:12px;
+overflow:hidden;
 transition:0.4s;
+position:relative;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.02);
+transform:translateY(-10px) scale(1.03);
 box-shadow:0 20px 50px rgba(212,175,55,0.4);
 }
 
 .card img{
 width:220px;
 border-radius:8px;
-cursor:pointer;
+transition:0.5s;
 }
 
-/* CONTACT */
+.card:hover img{
+transform:scale(1.1);
+}
+
+.card p{
+font-family:'Playfair Display', serif;
+font-size:20px;
+margin-top:10px;
+letter-spacing:1px;
+}
+
+/* CONTACT (CINEMATIC CTA) */
 .contact{
+background:linear-gradient(to right,#000,#111);
+padding:80px 20px;
 text-align:center;
-padding:60px;
 }
 
-.whatsapp{
-background:#25D366;
-color:white;
+.contact h2{
+font-family:'Playfair Display', serif;
+color:#D4AF37;
+font-size:30px;
 }
 
-.instagram{
-background:#E1306C;
-color:white;
+.big-btn{
+padding:15px 40px;
+font-size:16px;
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:20px;
-border-top:1px solid #C0C0C0;
+border-top:1px solid #333;
 }
 
-/* FLOATING BUTTON */
+/* FLOATING WHATSAPP */
 .floating-whatsapp{
 position:fixed;
 bottom:20px;
@@ -158,6 +207,7 @@ padding:15px;
 border-radius:50%;
 font-size:22px;
 text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
 /* ANIMATION */
@@ -194,8 +244,13 @@ nav.active{
 display:flex;
 }
 
-.hero h2{
-font-size:28px;
+.brand-title{
+font-size:34px;
+letter-spacing:4px;
+}
+
+.hero-overlay{
+padding:30px;
 }
 
 .products{
@@ -207,11 +262,9 @@ align-items:center;
 width:90%;
 }
 
+.logo-img{
+width:50px;
+height:50px;
 }
 
-.card p{
-font-family:'Playfair Display', serif;
-font-size:18px;
-margin-top:10px;
-letter-spacing:1px;
 }
