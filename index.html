@@ -6,108 +6,134 @@
 
 <title>VELVET HEX</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
 
-<div class="logo-container">
-<img src="LOGO.jpeg" class="logo-img">
-<span class="logo-text">VELVET HEX</span>
+<div class="nav-left">
+<img src="LOGO.jpeg" class="logo">
 </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="search-box">
+<span>🔍</span>
+<input type="text" placeholder="Search jewellery...">
+<span>✕</span>
+</div>
 
-<nav id="menu">
-<a href="#">Home</a>
-<a href="#collection">Collection</a>
-<a href="#contact">Contact</a>
-</nav>
+<div class="nav-right">
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+</div>
 
 </header>
 
-<!-- HERO -->
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+
+<h3>VELVET HEX</h3>
+
+<p>All Jewellery</p>
+<p>Necklaces</p>
+<p>Rings</p>
+<p>Earrings</p>
+<p>Bracelets</p>
+
+</div>
+
+<!-- HERO SLIDER -->
 <section class="hero">
 
-<div class="hero-overlay">
-
-<h1 class="brand-title">VELVET HEX</h1>
-<p class="tagline">Where Elegance Meets Mystery</p>
-
-<button onclick="scrollToCollection()" class="hero-btn">
-Explore Collection
-</button>
-
+<div class="slider">
+<img src="preview one.jpeg" class="slide active">
+<img src="preview two.jpeg" class="slide">
+<img src="preview three.jpeg" class="slide">
 </div>
 
 </section>
 
-<!-- COLLECTION -->
-<section id="collection" class="collection fade-in">
+<!-- PRODUCTS -->
+<section class="products">
 
-<h2>Our Collection</h2>
-
-<div class="products">
-
-<div class="card fade-in">
+<div class="card">
 <img src="Draven.jpg">
 <p>Draven</p>
 <button onclick="orderNow('Draven')">Order</button>
 </div>
 
-<div class="card fade-in">
+<div class="card">
 <img src="Elaris.jpg">
 <p>Elaris</p>
 <button onclick="orderNow('Elaris')">Order</button>
 </div>
 
-<div class="card fade-in">
+<div class="card">
 <img src="Helios.jpg">
 <p>Helios</p>
 <button onclick="orderNow('Helios')">Order</button>
 </div>
 
-<div class="card fade-in">
+<div class="card">
 <img src="Umbra.jpg">
 <p>Umbra</p>
 <button onclick="orderNow('Umbra')">Order</button>
 </div>
 
-<div class="card fade-in">
+<div class="card">
 <img src="Zeus.jpg">
 <p>Zeus</p>
 <button onclick="orderNow('Zeus')">Order</button>
 </div>
 
-</div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact fade-in">
+<section class="contact">
 
 <h2>Connect With Us</h2>
 
 <a href="https://wa.me/918847325312" target="_blank">
-<button class="whatsapp">WhatsApp</button>
+<button>WhatsApp</button>
 </a>
 
 <a href="https://instagram.com/velvethex.jewelry" target="_blank">
-<button class="instagram">Instagram</button>
+<button>Instagram</button>
 </a>
 
 </section>
 
-<footer>
-<p>© 2026 VELVET HEX</p>
-</footer>
+<!-- FEEDBACK -->
+<section class="feedback">
 
-<!-- FLOATING BUTTON -->
-<a href="https://wa.me/918847325312" class="floating-whatsapp" target="_blank">💬</a>
+<h2>Feedback</h2>
+
+<form id="feedbackForm">
+
+<p>Website kaisi lagi?</p>
+<label><input type="radio" name="rating" value="Bad"> Bad</label>
+<label><input type="radio" name="rating" value="Worse"> Worse</label>
+<label><input type="radio" name="rating" value="Good"> Good</label>
+<label><input type="radio" name="rating" value="Excellent"> Excellent</label>
+
+<br><br>
+
+<p>Anything to improve?</p>
+<textarea id="msg"></textarea>
+
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</section>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918847325312" class="floating-whatsapp">💬</a>
 
 <script src="script.js"></script>
 
