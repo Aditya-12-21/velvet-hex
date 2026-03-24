@@ -57,8 +57,13 @@
 </section>
 
 <!-- PRODUCTS -->
-<section class="products">
+<section id="collection" class="collection">
 
+<h2 class="section-title">Our Collection</h2>
+
+<div class="products">
+
+<!-- OLD PRODUCTS -->
 <div class="card">
 <img src="Draven.jpg">
 <p>Draven</p>
@@ -89,6 +94,70 @@
 <button onclick="orderNow('Zeus')">Order</button>
 </div>
 
+<!-- 🔥 NEW PRODUCTS -->
+
+<div class="card">
+<img src="Nyx.jpeg">
+<p>Nyx</p>
+<button onclick="orderNow('Nyx')">Order</button>
+</div>
+
+<div class="card">
+<img src="Ouro.jpeg">
+<p>Ouro</p>
+<button onclick="orderNow('Ouro')">Order</button>
+</div>
+
+<div class="card">
+<img src="Noctra.jpeg">
+<p>Noctra</p>
+<button onclick="orderNow('Noctra')">Order</button>
+</div>
+
+<div class="card">
+<img src="Astra.jpeg">
+<p>Astra</p>
+<button onclick="orderNow('Astra')">Order</button>
+</div>
+
+<div class="card">
+<img src="Glitch Heart.jpeg">
+<p>Glitch Heart</p>
+<button onclick="orderNow('Glitch Heart')">Order</button>
+</div>
+
+<div class="card">
+<img src="Inferra.jpeg">
+<p>Inferra</p>
+<button onclick="orderNow('Inferra')">Order</button>
+</div>
+
+<div class="card">
+<img src="Ares.jpeg">
+<p>Ares</p>
+<button onclick="orderNow('Ares')">Order</button>
+</div>
+
+<div class="card">
+<img src="Drako.jpeg">
+<p>Drako</p>
+<button onclick="orderNow('Drako')">Order</button>
+</div>
+
+<div class="card">
+<img src="Luma Draco.jpeg">
+<p>Luma Draco</p>
+<button onclick="orderNow('Luma Draco')">Order</button>
+</div>
+
+<div class="card">
+<img src="Hexa Clover.jpeg">
+<p>Hexa Clover</p>
+<button onclick="orderNow('Hexa Clover')">Order</button>
+</div>
+
+</div>
+
 </section>
 
 <!-- CONTACT -->
@@ -107,26 +176,23 @@
 </section>
 
 <!-- FEEDBACK -->
-<section class="feedback">
+<section class="feedback-section">
 
 <h2>Feedback</h2>
+<p class="sub">How was your experience?</p>
 
 <form id="feedbackForm">
 
-<p>Website kaisi lagi?</p>
+<div class="rating">
 <label><input type="radio" name="rating" value="Bad"> Bad</label>
 <label><input type="radio" name="rating" value="Worse"> Worse</label>
 <label><input type="radio" name="rating" value="Good"> Good</label>
 <label><input type="radio" name="rating" value="Excellent"> Excellent</label>
+</div>
 
-<br><br>
+<textarea placeholder="Anything we can improve?" id="message"></textarea>
 
-<p>Anything to improve?</p>
-<textarea id="msg"></textarea>
-
-<br><br>
-
-<button type="submit">Submit</button>
+<button type="submit">Submit Feedback</button>
 
 </form>
 
